@@ -21,6 +21,19 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Contact form email setup
+
+The contact form sends messages through Resend. Configure these server-only
+environment variables locally in `.env.local` and in the deployment platform:
+
+```bash
+RESEND_API_KEY=re_your_key
+CONTACT_TO_EMAIL=contact@caringheartsglobal.org
+CONTACT_FROM_EMAIL="Caring Hearts Website <website@caringheartsglobalrelief.org>"
+```
+
+`RESEND_API_KEY` must never use the `NEXT_PUBLIC_` prefix or be committed to Git.
+
 ## Quality checks
 
 ```bash
